@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+	<br>
+	<h3 class="text-center">Add a Blog Entry</h3>
+	<form method="POST">
+		<div class="form-group">
+			
+			<label for="title">Title:</label>
+			<input type="text" name="title" id="title" value="" class="form-control"> <br>
+
+			{% if request.method == 'POST' and request.form['title'] | length == 0 %}
+			<p class="alert alert-danger">Please write a title</p>
+			{% endif %}
+		</div>
+
+		<div class="form-group">
+			<label for="content">Content:</label><br>
+			<textarea name="content" id="content" value="" class="form-control"></textarea><br>
+
+			{% if request.method == 'POST' and request.form['content'] | length == 0 %}
+			<p class="alert alert-danger">Please write content
+			</p>
+			{% endif %}
+		</div>
+
+
+		<input class="btn btn-primary" type="submit" name="submit" value="Add entry">
+	</form>
+
+
+	
+
+	
+		
+{% endblock %}

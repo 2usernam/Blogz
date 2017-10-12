@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		<title></title>
+	</head>
+	<body>
+		
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a href="/blog" class="nav-item nav-link"> Main Blog Post</a>
+				<a href="/newpost" class="nav-item nav-link"> Add New Entry</a>
+			</nav>
+			{% block content %}
+			{% endblock %}
+		</div>
+	</body>
+</html>
